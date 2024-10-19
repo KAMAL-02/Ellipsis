@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Octokit } from "octokit";
-import axios from "axios";
 
 const octokit = new Octokit({
   auth: process.env.GITHUB_TOKEN,
