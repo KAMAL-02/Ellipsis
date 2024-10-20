@@ -9,7 +9,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "No code provided" }, { status: 400 });
   }
 
-  const prompt = `Analyze the following code for bugs and fixes and provide the best possible outcome:\n${code}`;
+  const prompt = `You are an AI that analyze the code for bugs and fixes and provides the best possible outcome, so do it for this code:\n${code}`;
   try {
     const result = await model.generateContent(prompt);
     return NextResponse.json({ result: result.response.text() });
