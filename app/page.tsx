@@ -1,5 +1,6 @@
 "use client";
 
+import Navbar from "@/components/Navbar";
 import { useSession } from "next-auth/react";
 
 export default function Home() {
@@ -26,7 +27,8 @@ export default function Home() {
   }
 
   return (
-    <div>
+    <div className="min-h-screen">
+      <Navbar />
       <p>Your user ID is: {session.user?.id}</p>
       <p>Your access token is: {session.accessToken}</p>
 

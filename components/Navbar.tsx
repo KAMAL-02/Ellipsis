@@ -44,32 +44,31 @@ export default function Navbar() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
               <div className="flex items-center">
-                <Link href="/Home" className="flex items-center text-white">
+                <Link href="/" className="flex items-center text-white transition-all duration-300 ease-in-out hover:text-opacity-60">
                   <Image src="/AI-4.png" alt="Logo" width={40} height={40} />
                   <span className="font-bold text-lg">ELLIPSIS</span>
                 </Link>
               </div>
 
-              {/* Centered links for medium to large screens */}
               <div className="hidden md:block">
                 <div className="flex justify-center items-baseline space-x-4">
                   <Link
-                    href="#"
+                    href="/Analyze-code"
                     className="text-white transition-all duration-300 ease-in-out hover:bg-white hover:bg-opacity-20 px-3 py-2 rounded-md text-base font-medium"
                   >
-                    Repo metrics
+                    Analyze code
                   </Link>
                   <Link
-                    href="#"
+                    href="/PR-summary"
                     className="text-white transition-all duration-300 ease-in-out hover:bg-white hover:bg-opacity-20 px-3 py-2 rounded-md text-base font-medium"
                   >
-                    Check pr
+                    PR summary
                   </Link>
                   <Link
-                    href="#"
+                    href="/Repo-stats"
                     className="text-white transition-all duration-300 ease-in-out hover:bg-white hover:bg-opacity-20 px-3 py-2 rounded-md text-base font-medium"
                   >
-                    Pull Requests
+                    Repo stats
                   </Link>
                 </div>
               </div>
@@ -78,7 +77,7 @@ export default function Navbar() {
                 <div className="ml-4 flex items-center md:ml-6">
                   <div className="ml-3 relative">
                     <div>
-                      <button className="max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                      <button className="max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800">
                         <span className="sr-only">Open user menu</span>
                         <Image
                           className="h-8 w-8 rounded-full"
@@ -131,22 +130,22 @@ export default function Navbar() {
           >
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <Link
-                href="#"
+                href="/Analyze-code"
                 className="text-white hover:bg-white hover:bg-opacity-20 block px-3 py-2 rounded-md text-base font-medium"
               >
-                Repository
+                Analyze code
               </Link>
               <Link
-                href="#"
+                href="/PR-summary"
                 className="text-white hover:bg-white hover:bg-opacity-20 block px-3 py-2 rounded-md text-base font-medium"
               >
-                Issues
+                PR summary
               </Link>
               <Link
-                href="#"
+                href="/Repo-stats"
                 className="text-white hover:bg-white hover:bg-opacity-20 block px-3 py-2 rounded-md text-base font-medium"
               >
-                Pull Requests
+                Repo stats
               </Link>
             </div>
           </div>
