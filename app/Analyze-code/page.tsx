@@ -3,11 +3,11 @@ import Heading from "@/components/Heading";
 import Navbar from "@/components/Navbar";
 import Textarea from "@/components/Textarea";
 
-export default function Home(){
+export default function AnalyzeCode(){
     return (
         <div className="min-h-screen">
            <Navbar />
-           <Heading />
+           <Heading heading={`Fix Code Issues`} />
            <Textarea />
            <Footer />
         </div>

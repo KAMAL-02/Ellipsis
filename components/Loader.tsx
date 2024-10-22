@@ -7,7 +7,7 @@ const Loader: React.FC = () => {
       <div className="loader"></div>
       <style jsx>{`
         .loader {
-          border: 7px solid rgba(255, 255, 255, 0.2);
+          border: 7px solid rgba(255, 255, 255);
           border-top: 5px solid #0670cc; /* Sky-400 */
           border-radius: 50%;
           width: 3rem;
