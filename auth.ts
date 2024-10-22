@@ -1,4 +1,4 @@
-import { NextAuthOptions } from "next-auth";
+import NextAuth, { NextAuthOptions } from "next-auth";
 import GithubProvider from "next-auth/providers/github";
 import prisma from "@/db";
 
@@ -15,6 +15,11 @@ export const authOptions: NextAuthOptions = {
           id: profile.id,
           username: profile.login,
           githubId: profile.id,
+          avatar: profile.avatar_url,
+          bio: profile.bio,
+          followers: profile.followers,
+          following: profile.following,
+          repos: profile.repos,
         };
       },
     }),
@@ -39,19 +44,28 @@ export const authOptions: NextAuthOptions = {
           token.accessToken = account.access_token;
           token.sub = user?.githubId;
         }
+
+        if (user) {
+          token.avatar = user.avatar;  // Add avatar to the token
+          token.username = user.username;  // Add username to the token
+        }
+
         return token;
       } catch (error) {
         console.error("Error in JWT callback:", error);
         return token;
       }
     },
-
     async session({ session, token }) {
       try {
         if (token.sub && token.accessToken) {
           session.user.id = token.sub;
           session.accessToken = token.accessToken as string;
         }
+
+        session.user.avatar = token.avatar as string;  // Pass avatar to the session
+        session.user.username = token.username as string;  // Pass username to the session
+
         return session;
       } catch (error) {
         console.error("Error in session callback:", error);
@@ -64,3 +78,6 @@ export const authOptions: NextAuthOptions = {
     strategy: "jwt",
   },
 };
+
+// Export NextAuth
+export default NextAuth(authOptions);
