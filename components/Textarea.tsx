@@ -27,26 +27,18 @@ export default function CodeAnalyzer() {
         code: text,
       });
       const analyzedText = response.data.result;
-      console.log(analyzedText);
       setAnalysis(analyzedText);
       setText("");
     } catch (error) {
       console.error("Error fetching AI analysis:", error);
       toast.error(
-        "An error occurred. Please try again later",
+        "Failed to analyse the code. Try again later",
         {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "colored",
+          containerId: 'GlobalApplicationToast',
         }
       );
       setAnalysis(
-        "An error occurred while analyzing the code. Please try again."
+        "An error occurred while analyzing the code. Try again later"
       );
     }finally {
       setLoading(false);
@@ -75,7 +67,6 @@ export default function CodeAnalyzer() {
         </div>
       </form>
       <AIAnalysis analysisText={analysis} loading={loading} />
-      <ToastContainer />
     </div>
   );
 }

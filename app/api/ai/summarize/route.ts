@@ -11,7 +11,7 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY as string);
     return NextResponse.json({ error: "No PR details provided" }, { status: 400 });
   }
 
-  const prompt = `Summarize the following pull request details:\n${prText}`;
+  const prompt = `Summarize the following pull request details with prefix as Summary is:\n${prText}`;
 
   try {
     const result = await model.generateContent(prompt);

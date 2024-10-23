@@ -78,7 +78,7 @@ export async function POST(request: NextRequest) {
           metrics.responseTimes.length
         : 0;
 
-    return NextResponse.json({ metrics });
+    return NextResponse.json({ metrics, avgResponseTime, repoData });
   } catch (error) {
     console.error(error);
     return NextResponse.json(

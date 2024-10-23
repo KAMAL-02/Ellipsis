@@ -1,42 +1,18 @@
-"use client";
 
-import Navbar from "@/components/Navbar";
-import { useSession } from "next-auth/react";
+import LandingPage from "@/components/LandingPage";
 
-export default function Home() {
-  const { data: session, status } = useSession();
-
-  if (!session) {
-    return <p>Please sign in</p>;
-  }
-
-  const  getSession = async () =>{
-    const response = await fetch('/api/post-comment', {
-      method: 'POST',  // Using POST method
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        owner: 'KAMAL-02',
-        repo: 'side-bar-menu',
-        pull_number: 2,
-        feedback: 'This is a test comment.',
-      }),
-    });
-    console.log(response);
-  }
-
-  return (
-    <div className="min-h-screen">
-      <Navbar />
-      <p>Your user ID is: {session.user?.id}</p>
-      <p>Your access token is: {session.accessToken}</p>
-
-      <button
-        onClick={getSession}
+export default function Home(){
+  return <main className="relative">
+    <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: 'url("/Background.jpeg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
       >
-        CLICK
-      </button>
-    </div>
-  );
+        <div className="absolute inset-0 bg-black/50" />
+      </div>
+  <LandingPage />
+</main>
 }

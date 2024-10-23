@@ -6,7 +6,7 @@ interface heading {
 
 export default function Heading({heading}:heading) {
   return (
-    <div className="flex items-center justify-center my-4">
+    <div className="flex items-center justify-center my-3">
       <div className="mr-4">
         <Image 
           src="/AI-4.png"

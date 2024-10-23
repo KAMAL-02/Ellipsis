@@ -20,6 +20,7 @@ export const authOptions: NextAuthOptions = {
           followers: profile.followers,
           following: profile.following,
           repos: profile.repos,
+          createdAt: profile.created_at,
         };
       },
     }),
@@ -46,8 +47,13 @@ export const authOptions: NextAuthOptions = {
         }
 
         if (user) {
-          token.avatar = user.avatar;  // Add avatar to the token
-          token.username = user.username;  // Add username to the token
+          token.avatar = user.avatar; 
+          token.username = user.username; 
+          token.bio = user.bio;        
+          token.followers = user.followers; 
+          token.following = user.following; 
+          token.repos = user.repos;
+          token.createdAt = user.createdAt;
         }
 
         return token;
@@ -63,8 +69,13 @@ export const authOptions: NextAuthOptions = {
           session.accessToken = token.accessToken as string;
         }
 
-        session.user.avatar = token.avatar as string;  // Pass avatar to the session
-        session.user.username = token.username as string;  // Pass username to the session
+        session.user.avatar = token.avatar as string;  
+        session.user.username = token.username as string;
+        session.user.bio = token.bio as string;             
+        session.user.followers = token.followers as number;   
+        session.user.following = token.following as number;   
+        session.user.repos = token.repos as number;
+        session.user.createdAt = token.createdAt as string
 
         return session;
       } catch (error) {

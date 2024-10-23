@@ -14,7 +14,7 @@ export function DesktopMenu() {
           href="/PR-summary"
           className="text-white transition-all duration-300 ease-in-out hover:text-opacity-80 px-3 py-2 rounded-md text-base font-medium"
         >
-          PR summary
+          Get PR
         </Link>
         <Link
           href="/Repo-stats"

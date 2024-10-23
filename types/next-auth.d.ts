@@ -5,16 +5,21 @@ declare module "next-auth" {
     id: string;
     githubId: string;
     username: string;
-    avatar: string;   // Add avatar field
+    avatar: string;
+    followers: number;
+    bio: string;
+    following: number;
+    repos: number;
+    createdAt: string;
   }
 
   interface Session {
-    user: User;  // Extend session user to include custom fields
+    user: User;
     accessToken: string;
   }
 
   interface JWT {
-    accessToken: string; // Ensure that the JWT also includes accessToken
-    sub: string;  // The GitHub ID (githubId) from your callback
+    accessToken: string;
+    sub: string;  
   }
 }

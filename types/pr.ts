@@ -10,5 +10,5 @@ export interface PRFile {
 
 export interface PRFilesResponse {
     prFiles: PRFile[];
-    aiSummary: string;
+    aiResult: string;
 }

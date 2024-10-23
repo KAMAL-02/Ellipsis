@@ -10,7 +10,7 @@ interface PRViewerProps {
 
 export default function PRViewer({ prFiles }: PRViewerProps) {
   return (
-    <div className="space-y-4 p-4">
+    <div className="space-y-4 p-2 sm:p-4">
       {prFiles.map((file) => (
         <FileCard key={file.sha} file={file} />
       ))}
@@ -24,9 +24,9 @@ function FileCard({ file }: { file: PRFile }) {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="flex items-center justify-between">
-          <span className="text-lg font-semibold">{file.filename}</span>
-          <span className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(file.status)}`}>
+        <CardTitle className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+          <span className="text-base sm:text-lg font-semibold mb-2 sm:mb-0">{file.filename}</span>
+          <span className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(file.status)} self-start sm:self-auto`}>
             {file.status}
           </span>
         </CardTitle>
@@ -46,7 +46,7 @@ function FileCard({ file }: { file: PRFile }) {
           variant="outline"
           size="sm"
           onClick={() => setIsExpanded(!isExpanded)}
-          className="mb-4"
+          className="mb-4 w-full sm:w-auto"
         >
           {isExpanded ? (
             <>
@@ -59,7 +59,7 @@ function FileCard({ file }: { file: PRFile }) {
           )}
         </Button>
         {isExpanded && file.patch && (
-          <pre className="bg-slate-800 p-4 rounded-md overflow-x-auto">
+          <pre className="bg-slate-800 p-2 sm:p-4 rounded-md overflow-x-auto text-sm">
             <code>{formatPatch(file.patch)}</code>
           </pre>
         )}
