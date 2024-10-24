@@ -61,6 +61,7 @@ const PostButton: React.FC<CommentButtonProps> = ({
         })
       handleClose();
     } catch (err) {
+      console.log(err);
       toast.error(
         "Failed to post comment. Please try again later",
         {

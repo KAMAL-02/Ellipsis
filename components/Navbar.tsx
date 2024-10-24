@@ -13,7 +13,7 @@ const useScrollDirection = () => {
 
   useEffect(() => {
     const toggleScrollDirection = () => {
-      let scrollY = window.pageYOffset;
+      const scrollY = window.pageYOffset;
       if (scrollY === 0) {
         setScrollDirection("up");
       } else if (scrollY > prevOffset) {

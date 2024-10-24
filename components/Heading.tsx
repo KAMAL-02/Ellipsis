@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 interface heading {
-  heading : String
+  heading : string
 }
 
 export default function Heading({heading}:heading) {

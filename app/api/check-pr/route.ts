@@ -8,7 +8,7 @@ const octokit = new Octokit({
 });
 
 
-export async function preparePRTextForAI(owner: string, repo: string, pull_number:number): Promise<string> {
+async function preparePRTextForAI(owner: string, repo: string, pull_number:number): Promise<string> {
   const prResponse = await octokit.rest.pulls.get({ owner, repo, pull_number });
   const filesResponse = await octokit.rest.pulls.listFiles({ owner, repo, pull_number });
 

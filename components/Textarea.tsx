@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Send } from "lucide-react";
 import AIAnalysis from "./AIanalysis";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 

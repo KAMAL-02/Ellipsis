@@ -58,6 +58,7 @@ export default function GitHubMetricsDashboard() {
       })
       setData(response.data)
     } catch (err) {
+      console.log("error is:", err);
       toast.error(
         "Failed to get the repo details. Try again later",
         {

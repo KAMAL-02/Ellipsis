@@ -34,7 +34,7 @@ export default function Error() {
         </div>
         
         <p className="text-muted-foreground mt-4">
-          Oops! It seems you've ventured into uncharted territory. The page you're looking for doesn't exist or has been moved.
+          Oops! It seems you&rsquo;ve ventured into uncharted territory. The page you&rsquo;re looking for doesn&rsquo;t exist or has been moved.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
