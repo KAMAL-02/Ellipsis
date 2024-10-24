@@ -53,7 +53,7 @@ export default function PRform() {
         <PostButton owner={owner} repo={repo} pull_number={pullNumber} feedback={summary} option={option}/>
         </div>
       <div className="flex flex-col md:flex-row justify-center items-start md:items-center space-y-6 md:space-y-0 md:space-x-6">
-        <div className="w-full md:w-1/2 max-w-md mx-auto bg-transparent p-6 rounded-lg shadow-md mt-10 border border-blue-600">
+        <div className="w-full md:w-1/2 max-w-md mx-auto bg-black/10 p-6 rounded-lg shadow-md mt-10 border border-blue-600">
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
               <label htmlFor="owner" className="block text-white font-semibold mb-1">

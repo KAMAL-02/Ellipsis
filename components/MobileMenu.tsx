@@ -50,7 +50,7 @@ export function MobileMenu({ menuOpen }: MobileMenuProps) {
           Repo stats
         </Link>
         <Link
-          href="/Repo-stats"
+          href="/user/profile"
           className="text-white hover:bg-white hover:bg-opacity-20 block px-3 py-2 rounded-md text-base font-medium"
         >
           Profile

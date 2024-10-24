@@ -8,7 +8,7 @@ function LandingPage() {
     <div className="relative min-h-screen flex flex-col">
       <Navbar />
       <div className="flex-1 flex items-center justify-center">
-        <div className="relative z-10 bg-white/10 backdrop-blur-md rounded-2xl p-8 md:p-12 max-w-4xl w-full mx-4 border border-blue-500 shadow-2xl">
+        <div className="relative z-10 bg-black/10 backdrop-blur-md rounded-2xl p-8 md:p-12 max-w-4xl w-full mx-4 border border-blue-500 shadow-2xl">
           <h1 className="text-4xl md:text-5xl font-bold text-white text-center mb-6 tracking-tight">
             Ellipsis
           </h1>

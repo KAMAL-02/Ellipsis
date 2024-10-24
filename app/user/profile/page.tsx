@@ -17,7 +17,7 @@ export default async function ProfilePage() {
       <div className="min-h-screen bg-transparent flex flex-col">
         <Navbar />
         <div className="flex-grow flex items-center justify-center">
-          <div className="text-center bg-transparent shadow-lg rounded-lg p-6 max-w-md w-full border border-blue-500">
+          <div className="text-center bg-black/30 shadow-lg rounded-lg p-6 max-w-md w-full border border-blue-500">
             <h1 className="text-3xl font-bold text-white mb-4">Sign In Required</h1>
             <p className="text-white mb-6">Please sign in to view your profile.</p>
             <a 
