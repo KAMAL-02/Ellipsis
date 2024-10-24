@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Octokit } from "octokit";
-import { authOptions } from "@/auth";
+import { authOptions } from "@/lib/auth";
 import { getServerSession } from "next-auth/next";
 import prisma from "@/db"; 
 

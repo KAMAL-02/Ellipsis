@@ -1,6 +1,6 @@
 import { getServerSession } from "next-auth";
 import ProfileSection from "@/components/ProfileSection";
-import { authOptions } from "@/auth";
+import { authOptions } from "@/lib/auth";
 import { toast } from "react-toastify";
 import prisma from "@/db";
 import Footer from "@/components/Footer";
