@@ -6,3 +6,10 @@ Ellipsis is an AI-powered code review tool that enhances the development workflo
 - **Frontend & Backend:** Next.js
 - **Database:** PostgreSQL
 - **ORM:** Prisma
+
+## Features
+- Analysis of provided code
+- Summarization of pull request content
+- Analysis of the provided pull request
+- Can post those analysis as a comment on github PRs
+- Authentication using Nextauth
