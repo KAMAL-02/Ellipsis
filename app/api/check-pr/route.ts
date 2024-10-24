@@ -42,12 +42,12 @@ export async function POST(req: NextRequest) {
 
     const prText = await preparePRTextForAI(owner, repo, pull_number);
     const code = prText;
-
+    const apiUrl = process.env.HOME_URL
     let aiResponse;
     if (option === 'summarize') {
-      aiResponse = await axios.post<summaryResponse>('http://localhost:3000/api/ai/summarize', { prText });
+      aiResponse = await axios.post<summaryResponse>(`${apiUrl}/api/ai/summarize`, { prText });
     } else if (option === 'analyze') {
-      aiResponse = await axios.post<summaryResponse>('http://localhost:3000/api/ai/analyze', { code });
+      aiResponse = await axios.post<summaryResponse>(`${apiUrl}/api/ai/analyze`, { code });
     } else {
       throw new Error("Invalid option provided. Use 'summarize' or 'analyze'.");
     }
