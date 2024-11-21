@@ -30,15 +30,12 @@ export default function CodeAnalyzer() {
       setAnalysis(analyzedText);
       setText("");
     } catch (error) {
-      console.error("Error fetching AI analysis:", error);
+      console.log("Error fetching AI analysis:", error);
       toast.error(
         "Failed to analyse the code. Try again later",
         {
           containerId: 'GlobalApplicationToast',
         }
-      );
-      setAnalysis(
-        "An error occurred while analyzing the code. Try again later"
       );
     }finally {
       setLoading(false);

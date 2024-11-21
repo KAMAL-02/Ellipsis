@@ -15,7 +15,7 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY as string);
 
   try {
     const result = await model.generateContent(prompt);
-    const response = await result.response;
+    const response = result.response;
     const summary = response.text();
     return NextResponse.json({ summary});
   } catch (error) {
